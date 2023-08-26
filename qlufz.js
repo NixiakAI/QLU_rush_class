@@ -567,16 +567,7 @@
 		}
 		window.onload = function() {
 			console.log("%c" + pro_info.author + "抢课助手v" + pro_info.version, "color:red"), $("body").prepend('<div style="background-color: black;height: 350px">\n    <style>\n        h1 {\n            color: white;\n            margin: 0;\n        }\n\n        select {\n            /*width: 300px;*/\n            border: 1px solid white;\n            background-color: black;\n            color: white;\n            outline: none;\n            height: 300px !important;\n            display: block;\n            padding: 5px 0 5px;\n            margin: 0 5px 0 5px;\n        }\n\n        #ok {\n            display: flex;\n            height: 300px;\n            align-items: center;\n        }\n\n        #button_domain {\n            margin: 10px;\n        }\n\n        .button_domain button {\n            width: 100px;\n            height: 50px;\n            background-color: black;\n            color: white;\n            border: 1px white solid;\n            cursor: pointer;\n            display: block;\n            margin: 5px;\n        }\n\n        .button_domain button:hover {\n            background-color: white;\n            color: black;\n        }\n\n        #inf {\n            display: flex;\n        }\n    </style>\n    <h1>QLU方正教务抢课器</h1>\n    <p style="color:#fff;" id="load">正在加载中。。。按f12查看详细情况。</p>\n    <div id="ok" style="display: none;">\n        <select id="cid" multiple="multiple" style="flex: 1;"></select>\n        <div id="inf" class="button_domain">\n            <select id="jxb" multiple="multiple" style="width: 300px"></select>\n            <div style="overflow-y: scroll;width: 300px;color: white;height: 300px"></div>\n        </div>\n        <span style="color: white">&gt;&gt;</span>\n        <select id="selected" multiple="multiple" style="flex: 1;"></select>\n        <div class="button_domain">\n            <button id="fetch">一键抢课</button>\n            <button id="stole">捡漏</button>\n            <button id="del" style="display: none">删除</button>\n        </div>\n    </div>\n</div>'), $.ajax({
-//				url: "https://raw.githubusercontent.com/Void-JackLee/ZFCourseTakingAssistant/main/package.json?ver=" + (new Date).getTime(),
-//				dataType: "json",
-//				async: !0,
-//				method: "get",
-//				success: n => {
-//					if(n.version !== pro_info.version) {
-//						const e = $("h1");
-//						e.html(e.html() + `<h5 style="font-size: 16px;display: inline;margin: 0">(检查到新版本v${n.version}：${n.newVersionDescription}[<a href='https://raw.githubusercontent.com/Void-JackLee/ZFCourseTakingAssistant/main/%E6%8A%A2%E8%AF%BE%E5%8A%A9%E6%89%8B.user.js'>点此更新</a>])</h5>`)
-//					}
-//				}
+
 			}), setTimeout(run, 100)
 		}, window.addOptionListener = function(n) {
 			cur = $(n).attr("id"), $("#del").css("display", "block").click((function() {
